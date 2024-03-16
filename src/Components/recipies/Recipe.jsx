@@ -1,6 +1,7 @@
+import PropTypes from 'prop-types';
 import { GiSandsOfTime } from "react-icons/gi";
 import { AiOutlineFire } from "react-icons/ai";
-const Recipe = ({ recipe }) => {
+const Recipe = ({ recipe, handleAddOrder }) => {
   const {
     recipe_name,
     recipe_img,
@@ -35,14 +36,14 @@ const Recipe = ({ recipe }) => {
             <div className="flex justify-between">
               <span className="flex items-center">
                 <GiSandsOfTime />
-                {preparing_time}
+                {preparing_time} minutes
               </span>
               <span className="flex items-center">
                 <AiOutlineFire />
-                {calories}
+                {calories} calories
               </span>
             </div>
-            <button className="bg-green-500 py-2 px-4 rounded-full font-bold my-4">
+            <button onClick={()=>handleAddOrder(recipe)} className="bg-green-500 py-2 px-4 rounded-full font-bold my-4">
               Want to cook
             </button>
           </div>
@@ -51,5 +52,8 @@ const Recipe = ({ recipe }) => {
     </div>
   );
 };
-
+Recipe.propTypes = {
+   recipe: PropTypes.object.isRequired,
+   handleAddOrder: PropTypes.func,
+}
 export default Recipe;

@@ -4,7 +4,7 @@ import { FaHamburger } from "react-icons/fa";
 import background from "../assets/background.jpg";
 const Header = () => {
   return (
-    <header className="mb-20">
+    <header className="sm:mb-20 mb-6">
       <nav className="container mx-auto">
         <div className="navbar bg-base-100">
           <div className="navbar-start">
