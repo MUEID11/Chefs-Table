@@ -3,5 +3,5 @@
 @tailwind components;
 @tailwind utilities;
 body{
-  font: "Lexend" sans-serif;
+  font-family: "Lexend", sans-serif;
 }

@@ -1,0 +1,56 @@
+[
+    {
+      "id": "1",
+      "recipe_name": "Classic Spaghetti Carbonara",
+      "recipe_img": "https://i.ibb.co/JqPPC2B/Classic-Spaghetti-Carbonara.jpg",
+      "short_description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper.",
+      "ingredients": ["Spaghetti", "Eggs", "Pancetta", "Parmesan cheese", "Black pepper","Salt"],
+      "preparing_time": 30,
+      "calories": 450
+    },
+    {
+      "id": "2",
+      "recipe_name": "Grilled Salmon",
+      "recipe_img": "https://i.ibb.co/wgbFsp3/Grilled-Salmon.jpg",
+      "short_description": "Fresh salmon fillets grilled to perfection and served with a tangy lemon-dill sauce.",
+      "ingredients": ["Salmon fillets", "Lemon", "Fresh dill", "Olive oil", "Salt", "Pepper"],
+      "preparing_time": 25,
+      "calories": 380
+    },
+    {
+      "id": "3",
+      "recipe_name": "Vegetable Stir-Fry",
+      "recipe_img": "https://i.ibb.co/3rtRvDz/Vegetable-Stir-Fry.jpg",
+      "short_description": "A colorful and nutritious stir-fry featuring an assortment of fresh vegetables.",
+      "ingredients": ["Broccoli", "Bell peppers", "Carrots", "Snow peas", "Mushrooms", "Soy sauce"],
+      "preparing_time": 20,
+      "calories": 250
+    },
+    {
+      "id": "4",
+      "recipe_name": "Margherita Pizza",
+      "recipe_img": "https://i.ibb.co/vHKn4pF/Margherita-Pizza.jpg",
+      "short_description": "A simple yet delicious pizza topped with fresh tomatoes, mozzarella cheese, and basil leaves.",
+      "ingredients": ["Pizza dough", "Tomatoes", "Fresh mozzarella cheese", "Basil leaves", "Olive oil", "Salt"],
+      "preparing_time": 35,
+      "calories": 320
+    },
+    {
+      "id": "5",
+      "recipe_name": "Chicken Caesar Salad",
+      "recipe_img": "https://i.ibb.co/g72DwJM/Chicken-Caesar-Salad.jpg",
+      "short_description": "A classic Caesar salad with grilled chicken, crisp romaine lettuce, croutons, and Caesar dressing.",
+      "ingredients": ["Chicken breasts", "Romaine lettuce", "Parmesan cheese", "Croutons", "Caesar dressing"],
+      "preparing_time": 15,
+      "calories": 320
+    },
+    {
+      "id": "6",
+      "recipe_name": "Chocolate Chip Cookies",
+      "recipe_img": "https://i.ibb.co/k3t0Q1r/Chocolate-Chip-Cookies.jpg",
+      "short_description": "Soft and chewy cookies packed with chocolate chips, perfect for satisfying your sweet tooth.",
+      "ingredients": ["All-purpose flour", "Butter", "Brown sugar", "White sugar", "Chocolate chips", "Vanilla extract"],
+      "preparing_time": 12,
+      "calories": 150
+    }
+  ]

@@ -4,7 +4,7 @@ import { FaHamburger } from "react-icons/fa";
 import background from "../assets/background.jpg";
 const Header = () => {
   return (
-    <header>
+    <header className="mb-20">
       <nav className="container mx-auto">
         <div className="navbar bg-base-100">
           <div className="navbar-start">
@@ -70,23 +70,28 @@ const Header = () => {
           backgroundImage: `url(${background})`,
           backgroundRepeat: "no-repeat",
           backgroundSize: "cover",
+          backgroundPosition: "center",
         }}
-        className="text-center text-white"
+        className="container mx-auto rounded-xl sm:p-28 p-4 text-center text-white sm:mt-10 sm:space-y-8 space-y-2 bg-gradient-to-t from-[#150B2BB3]"
       >
-        <h1 className="text-7xl">
+        <h1 className="sm:text-6xl text-2xl font-bold">
           Discover an exceptional cooking class tailored for you!
         </h1>
-        <p>
+        <p className="sm:text-lg text-sm">
           The authentic taste comes from family recipes and from fresh, simple
-          and tasteful ingredients straight from home. In every taco from LOS
-          TACOS No. 1 there is a bit of true Mexican culture and flavor.
+          and tasteful ingredients straight from home.
+          <br />
+          In every taco from LOS TACOS No. 1 there is a bit of true Mexican
+          culture and flavor.
         </p>
-        <button className="bg-green-400 text-xl rounded-full">
-          Explore Now
-        </button>
-        <button className="text-xl border-2 rounded-full bg-transparent">
-          Our Feedback
-        </button>
+        <div className="sm:space-x-6">
+          <button className="bg-green-500 text-xl rounded-full sm:mb-0 mb-2 py-1 px-5 border-2 border-green-500">
+            Explore Now
+          </button>
+          <button className="text-xl border-2 rounded-full bg-transparent py-1 px-4">
+            Our Feedback
+          </button>
+        </div>
       </div>
     </header>
   );
