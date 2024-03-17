@@ -54,6 +54,6 @@ const Recipe = ({ recipe, handleAddOrders }) => {
 };
 Recipe.propTypes = {
    recipe: PropTypes.object.isRequired,
-   handleAddOrders: PropTypes.func,
+   handleAddOrders: PropTypes.func.isRequired,
 }
 export default Recipe;
