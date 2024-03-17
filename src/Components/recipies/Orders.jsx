@@ -18,7 +18,7 @@ const Orders = ({ orders, handleCooking, cooking }) => {
           </h4>
           <hr className="my-4" />
           <div className="sm:flex justify-between flex-col">
-            <div className="overflow-x-auto">
+          <div className="overflow-x-auto">
             <table className="table-auto">
               <thead>
                 <tr>
@@ -28,7 +28,7 @@ const Orders = ({ orders, handleCooking, cooking }) => {
                   <th className="p-2">Calories</th>
                   <th className="p-2">Cook</th>
                 </tr>
-              </thead>
+            </thead>
 
               {orders.map((order, idx) => (
                 <Order key={order.id} idx={idx} order={order} handleCooking={handleCooking} />
