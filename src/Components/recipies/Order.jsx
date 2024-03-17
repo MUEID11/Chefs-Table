@@ -1,28 +1,28 @@
-const Order = ({order}) => {
-    
+import { GiCampCookingPot } from "react-icons/gi";
+import PropTypes from "prop-types";
+const Order = ({ order, idx, handleCooking }) => {
+  const { recipe_name, preparing_time, calories } = order;
+
+  
   return (
-    <>
-      <div className="lg:w-1/3 h-auto border rounded-xl sm:ml-8 sm:p-8 lg:mt-0 mt-4">
-        <div>
-          <h4 className="text-center font-bold text-2xl">Want To Cook:{order.length}</h4>
-          <hr className="my-4" />
-          <div className="flex justify-evenly">
-            <p>Name</p>
-            <p>Time</p>
-            <p>Calories</p>
-          </div>
-        </div>
-        <div className="mt-10">
-          <h4 className="text-center font-bold text-2xl">Currently Cooking:</h4>
-          <hr className="my-4" />
-          <div className="flex justify-evenly">
-            <p>Name</p>
-            <p>Time</p>
-            <p>Calories</p>
-          </div>
-        </div>
-      </div>
-    </>
+    <tbody>
+      <tr>
+        <td className="py-2 px-4">{idx + 1}</td>
+        <td className="py-2 px-4">{recipe_name}</td>
+        <td className="py-2 px-4">{preparing_time} minutes</td>
+        <td className="py-2 px-4">{calories} Calories</td>
+        <td className="py-2 px-4">
+          <button onClick={()=>handleCooking(order)} className="lg:text-5xl text-green-500">
+            <GiCampCookingPot />
+          </button>
+        </td>
+      </tr>
+    </tbody>
   );
+};
+Order.propTypes = {
+  order: PropTypes.object,
+  idx: PropTypes.number,
+  handleCooking: PropTypes.func,
 };
 export default Order;

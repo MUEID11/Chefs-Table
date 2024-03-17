@@ -1,22 +1,33 @@
 import { useState, useEffect } from "react";
 import Recipe from "./Recipe";
-import Order from "./Order";
+import Orders from "./Orders";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 const Recipes = () => {
   const [recipes, setRecipes] = useState([]);
-  const [order, setOrder] = useState([]);
-
+  const [orders, setOrders] = useState([]);
+  const [cooking, setCooking] = useState([]);
   useEffect(() => {
     async function loadData() {
-      const getData = await fetch("./../public/recipe.json");
+      const getData = await fetch("recipe.json");
       const data = await getData.json();
       setRecipes(data);
     }
     loadData();
   }, []);
 
-  const handleAddOrder =(item)=>{
-    const newOrders = [...order, item]
-    setOrder(newOrders)
+  const handleAddOrders = (item) => {
+    const isExists = orders.find((ordered) => ordered.id === item.id);
+    if (!isExists) {
+      setOrders([...orders, item]);
+    } else {
+      toast(`Order ${item.recipe_name} is now in the queue. Please wait.🕐`);
+    }
+  };
+  const handleCooking = (cook) =>{
+    setCooking([...cooking, cook]);
+    const removeData = orders.filter(ordered=> ordered.id !== cook.id);
+    setOrders(removeData);
   }
   return (
     <>
@@ -24,12 +35,18 @@ const Recipes = () => {
         <div className="lg:w-2/3">
           <div className="lg:grid grid-cols-2 gap-16 flex-col">
             {recipes.map((recipe) => (
-              <Recipe key={recipe.id} recipe={recipe} handleAddOrder={handleAddOrder}></Recipe>
+              <Recipe
+                key={recipe.id}
+                recipe={recipe}
+                handleAddOrders={handleAddOrders}
+                
+              ></Recipe>
             ))}
           </div>
         </div>
-        <Order order={order}/>
+        <Orders orders={orders} handleCooking={handleCooking} cooking={cooking}/>
       </div>
+      <ToastContainer />
     </>
   );
 };

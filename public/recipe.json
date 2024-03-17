@@ -1,7 +1,7 @@
 [
     {
       "id": "1",
-      "recipe_name": "Classic Spaghetti Carbonara",
+      "recipe_name": "Spaghetti Carbonara",
       "recipe_img": "https://i.ibb.co/JqPPC2B/Classic-Spaghetti-Carbonara.jpg",
       "short_description": "A classic Italian pasta dish made with eggs, cheese, pancetta, and black pepper.",
       "ingredients": ["Spaghetti", "Eggs", "Pancetta", "Parmesan cheese", "Black pepper","Salt"],
