@@ -77,8 +77,8 @@ const Orders = ({ orders, handleCooking, cooking }) => {
   );
 };
 Orders.propTypes = {
-  orders: PropTypes.array,
-  cooking: PropTypes.array,
-  handleCooking: PropTypes.func,
+  orders: PropTypes.array.isRequired,
+  cooking: PropTypes.array.isRequired,
+  handleCooking: PropTypes.func.isRequired,
 };
 export default Orders;
